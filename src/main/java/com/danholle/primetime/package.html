@@ -1,0 +1,28 @@
+<html>
+  <head><title>mersenne package</title></head>
+  <body>
+      The "primetime" package is a set of Java tools for finding Mersenne
+      primes... and, specifically, a webapp for searching incessantly for 
+      such primes, and presenting the status of the search as the search
+      continues.
+      <p>
+      <h3>Overview</h3>
+      Here is the overall flow.
+      <ul>
+        <li>When the web server (typically Tomcat) comes up, it starts "task", which sets up and executes the background 
+          search for large primes.
+          <ul>
+            <li>"task" initiates a "qthread" which runs in the background.
+            <li>"qthread", in turn, uses "putils" to do the real work.
+          </ul>
+        <li>There is a log file that captures results.  This log file is consulted on startup to resume 
+          where we left off.
+          <ul>
+            <li>"quest" is an object that captures the current state of the computation.  It is initialized 
+              from the log file, and is referenced by the web app to display current state.
+          </ul>
+        <li>The actual webapp is presented through a single page, with custom tags to display the state of the search.
+          These custom tags are:  sofar, summary, latest.
+      </ul>
+  </body>                        
+</html>

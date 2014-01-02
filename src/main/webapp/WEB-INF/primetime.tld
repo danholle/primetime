@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<!DOCTYPE taglib PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.1//EN" "http://java.sun.com/j2ee/dtds/web-jsptaglibrary_1_1.dtd">
+<taglib>
+  <tlibversion>1.0</tlibversion>
+  <jspversion>1.1</jspversion>
+  <shortname>mersenne</shortname>
+  <uri>http://www.danholle.com/primetime</uri>
+  <tag>
+    <name>sofar</name>
+    <tagclass>com.danholle.primetime.sofar</tagclass>
+    <bodycontent>JSP</bodycontent>        
+  </tag>
+  <tag>
+    <name>summary</name>
+    <tagclass>com.danholle.primetime.summary</tagclass>
+    <bodycontent>JSP</bodycontent>        
+  </tag>
+  <tag>
+    <name>latest</name>
+    <tagclass>com.danholle.primetime.latest</tagclass>
+    <bodycontent>JSP</bodycontent>        
+  </tag>
+</taglib>
+
+
+
